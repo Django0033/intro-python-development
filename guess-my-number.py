@@ -14,4 +14,4 @@ while magic_number != guess:
         guess = int(input('What is your guess? '))
         guess_count = guess_count + 1
 
-print(f'You guessed it after {guess_count} trys!')
+print(f'You guessed it after {guess_count} tries!')
