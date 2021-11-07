@@ -28,10 +28,6 @@ green_image = Image.open('./img/cactus.jpg')
 green_pixels = green_image.load()
 (green_width, green_height) = green_image.size
 
-r, g, b = green_pixels[0, 0] 
-
-print(r, g, b)
-
 for i in range(green_width):
     for j in range(green_height):
         r, g, b = green_pixels[i, j] 
