@@ -18,3 +18,8 @@ while action != 5:
         item = input('What item would you like to add? ')
         shopping_cart.append(item)
         print(f'\'{item}\' has been added to the cart.')
+
+    elif action == 2:
+        print('The contents of the shopping cart are:')
+        for item in shopping_cart:
+            print(item)
