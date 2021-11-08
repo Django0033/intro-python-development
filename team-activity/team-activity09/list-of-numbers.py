@@ -1,6 +1,7 @@
 numbers = []
 number = ''
 number_sum = 0
+positive_numbers = []
 
 print('Enter a list of numbers, type 0 when finished.')
 
@@ -13,8 +14,12 @@ while number != 0:
 for number in numbers:
     number_sum += number
 
+    if number > 0:
+        positive_numbers.append(number)
+
 number_average = number_sum / len(numbers)
 
 print(f'The sum is: {int(number_sum)}')
 print(f'The average is: {number_average}')
 print(f'The largest number is: {max(numbers)}')
+print(f'The smallest positive number is: {int(min(positive_numbers))}')
