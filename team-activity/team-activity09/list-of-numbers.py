@@ -14,5 +14,8 @@ while number != 0:
 for number in numbers:
     number_sum += number
 
+number_average = number_sum / len(numbers)
+
 print(numbers)
 print(f'The sum is: {int(number_sum)}')
+print(f'The average is: {number_average}')
