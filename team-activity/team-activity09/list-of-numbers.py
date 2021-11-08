@@ -15,4 +15,4 @@ for number in numbers:
     number_sum += number
 
 print(numbers)
-print(number_sum)
+print(f'The sum is: {int(number_sum)}')
