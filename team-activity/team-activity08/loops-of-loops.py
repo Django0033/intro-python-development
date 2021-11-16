@@ -11,7 +11,7 @@ product = number_rows_columns * number_rows_columns # Gets the highest product
 #         product = i * j
 
 product_digits = len(str(product)) # This gets the number of digits of the last product
-
+                        #5
 for i in range(1, range_size): # This creates rows
 
     for j in range(1 , range_size): # This prints each number of a row
