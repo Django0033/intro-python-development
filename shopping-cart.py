@@ -41,11 +41,18 @@ while action != 5:
     elif action == 3:
         index_to_remove = int(
             input(f'Which item would you like to remove? ')) - 1
+
+        while index_to_remove not in range(len(shopping_cart)):
+            print('Invalid choice.')
+            index_to_remove = int(
+                input(f'Which item would you like to remove? ')) - 1
+
         shopping_cart.pop(index_to_remove)
         prices.pop(index_to_remove)
         print('Item removed.')
 
     elif action == 4:
+        total = 0
 
         for price in prices:
             total += float(price)
