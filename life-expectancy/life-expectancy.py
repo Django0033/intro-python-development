@@ -34,6 +34,12 @@ abbreviations_of_interest = []
 years_of_interest = []
 life_of_interest = []
 
+def fill_lists_of_interest():
+    countries_of_interest.append(countries[i])
+    abbreviations_of_interest.append(abbreviations[i])
+    years_of_interest.append(years[i])
+    life_of_interest.append(float(life_expectancies[i]))
+
 year_of_interest = input('\nEnter the year of interest: ')
 print('\nThe overall max life expectancy is: {} from {} in {}'.format(highest_life_expectancy, highest_life_country, highest_life_year) + '\nThe '
       'overall min life expectancy is: {} from {} in {}'.format(lowest_life_expectancy, lowest_life_country, lowest_life_year))
@@ -41,10 +47,7 @@ print('\nFor the year {}:'.format(year_of_interest))
 
 for i in range(len(years)):
     if years[i] == year_of_interest:
-        countries_of_interest.append(countries[i])
-        abbreviations_of_interest.append(abbreviations[i])
-        years_of_interest.append(years[i])
-        life_of_interest.append(float(life_expectancies[i]))
+        fill_lists_of_interest()
 
 average_life_interest = sum(life_of_interest) / len(life_of_interest)
 max_life_interest = max(life_of_interest)
@@ -64,10 +67,7 @@ life_of_interest = []
 
 for i in range(len(countries)):
     if countries[i].lower() == country_of_interest.lower():
-        countries_of_interest.append(countries[i])
-        abbreviations_of_interest.append(abbreviations[i])
-        years_of_interest.append(years[i])
-        life_of_interest.append(float(life_expectancies[i]))
+        fill_lists_of_interest()
 
 average_life_interest = sum(life_of_interest) / len(life_of_interest)
 max_life_interest = max(life_of_interest)
