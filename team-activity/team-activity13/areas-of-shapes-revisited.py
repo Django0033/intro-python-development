@@ -6,18 +6,37 @@ def compute_area_rectangle(length, width):
 def compute_area_square(side):
     return compute_area_rectangle(side,side)
 
-def comute_area_circle(radius):
+def compute_area_circle(radius):
     return math.pi * radius ** 2
 
-square_side = int(input('Enter the length of a side of a square: '))
-square_area = compute_area_square(square_side)
-print('The area of the square is: {}'.format(square_area))
+def compute_area(shape, length_radius, width = 1):
+    if shape == 'rectangle':
+        return compute_area_rectangle(length_radius, width)
 
-rectangle_length = int(input('Enter the length of a rectangle: '))
-rectangle_width = int(input('Enter the width of a rectangle: '))
-rectangle_area = compute_area_rectangle(rectangle_length, rectangle_width)
-print('The area of the rectangle is: {}'.format(rectangle_area))
+    elif shape == 'square':
+        return compute_area_square(length_radius)
 
-circle_radius = int(input('Enter the radius of a circle: '))
-circle_area = comute_area_circle(circle_radius)
-print('The area of the circle is: {}'.format(circle_area))
+    elif shape == 'circle':
+        return compute_area_circle(length_radius)
+
+    else:
+        return 'Invalid shape'
+
+shape_choice = input('Enter shape: ')
+
+if shape_choice == 'rectangle':
+    length = int(input('Enter width: '))
+    width = int(input('Enter length: '))
+    print(compute_area(shape_choice, length, width))
+
+elif shape_choice == 'square':
+    side = int(input('Enter side: '))
+    print(compute_area(shape_choice, side))
+
+elif shape_choice == 'circle':
+    radius = float(input('Enter radius: '))
+    print(compute_area(shape_choice, radius))
+
+else:
+    print('Invalid shape')
+
