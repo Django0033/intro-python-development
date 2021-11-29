@@ -4,7 +4,7 @@ def compute_area_rectangle(length, width):
     return length * width
 
 def compute_area_square(side):
-    return side ** 2
+    return compute_area_rectangle(side,side)
 
 def comute_area_circle(radius):
     return math.pi * radius ** 2
